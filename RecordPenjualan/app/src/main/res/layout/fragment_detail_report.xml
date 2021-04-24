@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:name="id.rdev.catatanpenjualan.activity.report.detail.DetailReportFragment"
+    android:padding="@dimen/small"
+    android:background="@color/colorFree"
+    tools:context=".activity.report.detail.DetailReportFragment">
+
+    <TextView
+        android:id="@+id/tvTitleReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#E91E63"
+        android:padding="@dimen/normal"
+        android:text="Report Detail"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tvTitleReport"
+        android:layout_marginLeft="@dimen/normal"
+        android:text="TERJUAL"/>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvTitleReport"
+        android:paddingRight="@dimen/normal"
+        android:text="Tanggal : 18-03-2019"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/colorFree"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvDate"
+        android:id="@+id/list"
+        android:layout_margin="@dimen/high"
+        android:layout_above="@id/tvGrandTotal"
+
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_keranjang" />
+
+    <TextView
+        android:id="@+id/qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/normal"
+        android:textSize="18sp"
+        android:text="Qty: "/>
+
+    <TextView
+        android:id="@+id/tvQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@id/qty"
+        android:layout_toRightOf="@id/qty"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/normal"
+        android:layout_marginEnd="@dimen/normal"
+        android:layout_toEndOf="@id/tvQty"
+        android:text="Total: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvGrandTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/total"
+        android:text="Rp. 230.000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

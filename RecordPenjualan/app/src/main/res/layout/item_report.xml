@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/small"
+    android:background="@color/colorFree"
+    android:padding="@dimen/high">
+
+    <TextView
+        android:id="@+id/tvReportDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12-03-2019"/>
+
+    <TextView
+        android:id="@+id/tvReportStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal"
+        android:layout_toRightOf="@id/tvReportDate"
+        android:text="TERJUAL"/>
+
+    <TextView
+        android:id="@+id/tvReportTotalHarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Rp. 230.000"/>
+
+    <ImageView
+        android:id="@+id/imReportModify"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_toLeftOf="@id/tvReportTotalHarga"
+        android:layout_marginRight="@dimen/normal"
+        android:src="@drawable/ic_restore_black"/>
+
+</RelativeLayout>

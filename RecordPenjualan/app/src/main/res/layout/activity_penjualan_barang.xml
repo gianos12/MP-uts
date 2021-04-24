@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activity.penjualan.PenjualanBarang">
+
+
+    <RelativeLayout
+        android:id="@+id/keteranganKeranjang"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#E91E63"
+        android:padding="@dimen/normal">
+
+        <LinearLayout
+            android:id="@+id/btKeranjang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imKeranjangNow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@color/colorPrimaryDark"
+                android:paddingLeft="@dimen/small"
+                android:paddingRight="@dimen/small"
+                android:src="@drawable/ic_cart_light" />
+
+            <TextView
+                android:id="@+id/tvKeranjangNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small"
+                android:layout_marginEnd="@dimen/small"
+                android:text="1"
+                android:textColor="@color/colorFree"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/imKeranjangAdd"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@color/colorPrimaryDark"
+                android:paddingLeft="@dimen/small"
+                android:paddingRight="@dimen/small"
+                android:src="@drawable/ic_add_white" />
+
+            <ImageView
+                android:id="@+id/imKeranjangDelete"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="@dimen/normal"
+                android:background="@color/colorPrimaryDark"
+                android:paddingLeft="@dimen/small"
+                android:paddingRight="@dimen/small"
+                android:src="@drawable/ic_delete_white" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btKeranjang"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginEnd="@dimen/high"
+            android:text="Total:"
+            android:textColor="@color/colorFree"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/ivTotalQty"
+            android:layout_width="15dp"
+            android:layout_height="24dp"
+            android:layout_below="@id/btKeranjang"
+            android:layout_marginTop="@dimen/small"
+            android:layout_toRightOf="@id/tvTotal"
+            android:src="@drawable/ic_widgets_white" />
+
+        <TextView
+            android:id="@+id/tvKeranjangTotalQty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btKeranjang"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginEnd="@dimen/high"
+            android:layout_toEndOf="@id/ivTotalQty"
+            android:text="0"
+            android:textColor="@color/colorFree"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvKeranjangTotalHarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tvKeranjangTotalQty"
+            android:layout_alignParentRight="true"
+            android:text="Rp. 0.0"
+            android:textColor="@color/colorFree"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btBayar"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/normal"
+            android:background="@color/colorPrimaryDark"
+            android:text="Bayar"
+            android:textColor="@color/colorFree" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvKeranjangBarang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/keteranganKeranjang"
+        android:layout_above="@id/beliBar"
+        tools:listitem="@layout/item_keranjang"
+        android:padding="@dimen/normal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <ListView
+        android:id="@+id/lvResultSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorFree"
+        android:layout_above="@id/beliBar"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/beliBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:elevation="@dimen/small"
+        android:padding="@dimen/high"
+        android:layout_marginTop="1dp"
+        android:background="@color/colorFree"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etSearchBarang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_weight="8"
+            android:inputType="text"
+            android:layout_marginRight="@dimen/normal"
+            android:background="@drawable/background_light"
+            android:hint="barang" />
+
+        <EditText
+            android:id="@+id/etQty"
+            android:text="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:ems="10"
+            android:background="@drawable/background_light"
+            android:layout_marginRight="@dimen/normal"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btAddToKeranjang"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.5"
+            android:background="#E91E63"
+            android:text="+"
+            android:textColor="@color/colorFree" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvKeranjang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorFree"
+        android:layout_below="@id/keteranganKeranjang"
+        android:visibility="gone"
+        android:backgroundTint="@color/colorSmooth"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+</RelativeLayout>

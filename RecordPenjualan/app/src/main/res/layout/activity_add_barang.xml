@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4sp"
+    tools:context=".activity.data_barang.AddBarangActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/etAddBarangBarcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_light"
+            android:hint="barcode" />
+
+        <EditText
+            android:id="@+id/etAddBarangNamaBarang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal"
+            android:background="@drawable/background_light"
+            android:hint="nama barang" />
+
+        <EditText
+            android:id="@+id/etAddBarangKategori"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal"
+            android:background="@drawable/background_light"
+            android:hint="kategori" />
+
+
+        <EditText
+            android:id="@+id/etAddBarangHargaBeli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal"
+            android:background="@drawable/background_light"
+            android:hint="harga beli"
+            android:inputType="numberDecimal"
+            android:text="0" />
+
+        <EditText
+            android:id="@+id/etAddBarangHargaJual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal"
+            android:background="@drawable/background_light"
+            android:hint="harga jual"
+            android:inputType="numberDecimal"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btAddBarang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/normal"
+            android:background="#E91E63"
+            android:text="Tambahkan"
+            android:textColor="@color/colorFree" />
+
+    </LinearLayout>
+
+</ScrollView>

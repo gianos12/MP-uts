@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/normal"
+    android:background="@color/colorFree"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvKeranjangNo"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/normal"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/tvKeranjangName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvKeranjangNo"
+        android:padding="@dimen/normal"
+        android:text="NASI UDUK 1 KG"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvKeranjangQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvKeranjangName"
+        android:layout_toEndOf="@id/tvKeranjangNo"
+        android:padding="@dimen/normal"
+        android:text="2 x " />
+
+    <TextView
+        android:id="@+id/tvKeranjangHargaJual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tvKeranjangQty"
+        android:layout_toRightOf="@id/tvKeranjangQty"
+        android:padding="@dimen/normal"
+        android:text="10.000" />
+
+    <TextView
+        android:id="@+id/tvKeranjangTotalItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tvKeranjangQty"
+        android:layout_toRightOf="@id/tvKeranjangHargaJual"
+        android:padding="@dimen/normal"
+        android:text="20.000" />
+
+    <ImageView
+        android:id="@+id/ibKeranjangDeleteItem"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:padding="@dimen/normal"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tvKeranjangName"
+        android:src="@drawable/ic_delete" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"/>
+
+</RelativeLayout>
